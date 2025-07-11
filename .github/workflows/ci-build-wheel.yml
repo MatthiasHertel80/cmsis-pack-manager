@@ -36,9 +36,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install Rust
-        run: |
-          rustup toolchain install --profile minimal 1.71.1
-          rustup default 1.71.1
+        uses: actions-rust-lang/setup-rust-toolchain@v1
 
       - name: Install Rust *-apple-darwin targets
         if: runner.os == 'macOS'

@@ -49,9 +49,10 @@ jobs:
       - name: Install Rust *-pc-windows-msvc targets
         if: runner.os == 'Windows'
         run: |
+          rustup target add aarch64-pc-windows-msvc
           rustup target add x86_64-pc-windows-msvc
           rustup target add i686-pc-windows-msvc
-
+  
       - uses: actions/setup-python@v4
         name: Install Python
         with:

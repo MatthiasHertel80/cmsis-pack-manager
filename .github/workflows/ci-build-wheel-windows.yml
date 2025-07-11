@@ -24,6 +24,11 @@ jobs:
           toolchain: 1.71.1
           profile: minimal
 
+      - name: Install Rust *-pc-windows-msvc
+        run: |
+          rustup target add aarch64-pc-windows-msvc
+          rustup target add i686-pc-windows-msvc
+
       - uses: actions/setup-python@v4
         name: Install Python
         with:
